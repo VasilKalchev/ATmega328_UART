@@ -1,0 +1,53 @@
+/*!
+\mainpage Main Page
+\tableofcontents
+
+
+\section init Initialization
+
+@ref void UART_Init(const UART_CharacterSize characterSize, const UART_Parity parity, const UART_StopBits stopBits); <br>
+
+@see
+@ref UART_CharacterSize <br>
+@ref UART_Parity <br>
+@ref UART_StopBits <br>
+
+
+<br>
+\section polling_implementation Polling implementation
+
+\subsection polling_read_write Read/Write
+@ref uint8_t UART_Read(void); <br>
+@ref void UART_Write(const uint8_t data); <br>
+
+\subsection status_checking Status checking
+@ref UART_Status UART_WriteReady(void); <br>
+@ref UART_Status UART_ReadReady(void); <br>
+
+@see
+@ref ReturnStatus <br>
+
+
+<br>
+\section interrupts_implementation Interrupts implementation
+
+\subsection interrupts_read_write Read/Write
+@ref uint8_t UART_Read(void); <br>
+@ref void UART_Write(const uint8_t data); <br>
+
+\subsection interrupts_control Interrupts control
+@ref void UART_EnableInterruptTxReady(void); <br>
+@ref void UART_DisableInterruptTxReady(void); <br>
+@ref void UART_EnableInterruptRxComplete(void); <br>
+@ref void UART_DisableInterruptRxComplete(void); <br>
+
+
+<br>
+\section formatted_streams Formatted IO streams
+@ref void UART_Putchar(const uint8_t data, FILE *stream); <br>
+@ref uint8_t UART_Getchar(FILE *stream); <br>
+
+
+@example IO_streams.c
+@example Interrupts.c
+ */
